@@ -1,8 +1,23 @@
-﻿@model Umbraco.Web.Models.RenderModel
+﻿@using Webshop.view.ViewModels
+@model Umbraco.Web.Models.RenderModel
 
 @{
-    ViewBag.Title = "";
+
     Layout = "../umbLayout.cshtml";
+    var viewmodel = new ProductGroupViewmodel(Model.Content);
+    ViewBag.Title = viewmodel.Name;
 }
 
-<h2>title</h2>
+<h2>@viewmodel.Name</h2>
+
+@{
+    foreach (var product in viewmodel.Products)
+    {
+        <div>
+            <div>@product.Name</div>
+            <div>@product.Price</div>
+        </div>
+ 
+    }
+}
+

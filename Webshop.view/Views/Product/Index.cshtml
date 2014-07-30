@@ -2,7 +2,8 @@
 @model Umbraco.Web.Models.RenderModel
 
 @{
-    ViewBag.Title = "";
+    
     Layout = "../umbLayout.cshtml";
     var viewmodel = new ProductGroupViewmodel(Model);
+    ViewBag.Title = viewmodel.Name;
 }
