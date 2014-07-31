@@ -242,6 +242,7 @@
     <Content Include="Views\Partials\umbNewsOverviewWidget.cshtml" />
     <Content Include="Views\Partials\umbSocial.cshtml" />
     <Content Include="Views\Partials\umbTopNavigation.cshtml" />
+    <None Include="Properties\PublishProfiles\WebshopLA.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -253,9 +254,12 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProductGroupController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -284,7 +288,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>7010</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http:\\webshop.local.dk</IISUrl>
+          <IISUrl>http://webshop.local.dk/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

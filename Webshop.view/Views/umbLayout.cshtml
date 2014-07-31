@@ -1,4 +1,4 @@
-@inherits UmbracoTemplatePage
+﻿@inherits UmbracoTemplatePage
 @{
     Layout = null;
 }<!DOCTYPE html>
@@ -63,5 +63,13 @@
         </div>
     </footer>
     <!-- /Footer -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.5/minicart.min.js"></script>
+    <script>
+        
+        var config = {
+            action : "https://www.sandbox.paypal.com/cgi-bin/webscr",
+        }
+        paypal.minicart.render(config);
+    </script>
 </body>
 </html>

@@ -31,5 +31,7 @@ namespace Webshop.view.ViewModels
         {
             get { return decimal.Parse(GetPropertyValue("Price").ToString()); }
         }
+
+        
     }
 }

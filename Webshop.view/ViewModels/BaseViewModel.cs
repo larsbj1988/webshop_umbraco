@@ -12,6 +12,14 @@ namespace Webshop.view.ViewModels
             _model = model;
         }
 
+        public object ID
+        {
+            get
+            {
+                return _model.Id;
+            }
+        }
+
         public string Name
         {
             get
